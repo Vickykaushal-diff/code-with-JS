@@ -36,3 +36,25 @@ console.log(typeof undefined) // undefined
 console.log(typeof heros) // object
 console.log(typeof myObj) // object
 console.log(typeof myFunc) // function
+
+//**************************
+
+// Stack (Primitives) vs Heap (Non-Primitives)
+// Stack is faster than Heap
+
+let myYoutubename = "Kaushal"
+let anotherName = myYoutubename
+
+console.log(myYoutubename) // Kaushal
+console.log(anotherName) // Kaushal
+
+let userOne = {
+    email: "User@google.com",
+    upi: "user@ybl"
+}
+
+let usertwo = userOne
+
+userTwo.email = "Hitesh@google.com"
+console.log(userOne.email)
+console.log(userTwo.email)
