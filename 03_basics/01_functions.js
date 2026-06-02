@@ -30,3 +30,36 @@ function loginUserMessage(username = "sam"){
 console.log(loginUserMessage("Hitesh"))
 console.log(loginUserMessage())
 
+// function calculateCartPrice1(val1, val2,...num1){ //...num1 is rest parameter which allows us to pass an arbitrary number of arguments to the function and it will be stored in an array
+//     return num1;
+// }
+// console.log(calculateCartPrice1(100, 200, 300, 4000, 500)) // passing multiple arguments to the function and it will be stored in an array
+
+function calculateCartPrice(...num1){ //...num1 is rest parameter which allows us to pass an arbitrary number of arguments to the function and it will be stored in an array
+    return num1;
+}
+console.log(calculateCartPrice(100, 200, 300, 4000, 500)) // passing multiple arguments to the function and it will be stored in an array
+
+const user = {
+    username: "Hitesh Sharma",
+    price: 999,
+    courseInstructor: "Hitesh Sharma"
+}
+
+function handleObject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price} and courseInstructor is ${anyobject.courseInstructor}`);
+}
+// handleObject(user) // passing an object as an argument to a function
+
+handleObject({
+    username: "Hitesh Sharma",
+    price: 999,
+    courseInstructor: "Hitesh Sharma"
+}) // passing an object as an argument to a function without storing it in a variable
+
+const myNewArray = [1, 2, 3, 4, 5]
+
+function handleArray(getarray){
+    return getarray[2];
+}
+console.log(handleArray(myNewArray)) // passing an array as an argument to a function and accessing the element at index 2
